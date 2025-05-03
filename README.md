@@ -29,6 +29,6 @@ Compile with `npx tsc` and run from the `out` folder with `node blah.js`
 
 <!-- URLS -->
 
-[May 19th 2025](http://archive.today/2025.04.21-074155/https://help.twitch.tv/s/article/video-on-demand?language=en_US)
-[vodbot](https://github.com/qixils/vodbot)
-[Broadcasters w/ Endless Retention](https://docs.google.com/spreadsheets/d/1-_XWKN_QEtoWKMuzhMWoFzP1jgA1i2y6D1rYVTskWsg/edit?usp=sharing)
+[May 19th 2025]: http://archive.today/2025.04.21-074155/https://help.twitch.tv/s/article/video-on-demand?language=en_US
+[vodbot]: https://github.com/qixils/vodbot
+[Broadcasters w/ Endless Retention]: https://docs.google.com/spreadsheets/d/1-_XWKN_QEtoWKMuzhMWoFzP1jgA1i2y6D1rYVTskWsg/edit?usp=sharing
