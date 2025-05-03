@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.13.5",
+    "base64url": "^3.0.1",
+    "dotenv": "^16.4.7",
+    "node-warc": "^3.3.1",
+    "type-fest": "^4.35.0",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.9.1"
+  }
+}
