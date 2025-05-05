@@ -78,8 +78,9 @@ const loadUploaded = async () => {
 
 const loadDownloaded = async () => {
   try {
-    const files = await fs.readdir("H:\\vodbot\\stage");
-    return files.map(f => f.replace(/\.stage$/, ''));
+    const staged = (await fs.readdir("H:\\vodbot\\stage")).map(f => f.replace(/\.stage$/, ''));
+    const downloaded = (await fs.readFile("H:\\vodbot\\vods\\uploads.csv")).toString().trim().split(/\s+/).map(line => line.split(",")[0]);
+    return [...new Set([...staged, ...downloaded])];
   } catch {
     return [];
   }
@@ -242,9 +243,10 @@ async function processQueue(
     state.downloaded.add(id);
   }
   // allow failed uploads to retry
-  for (const id of state.downloaded) {
-    state.failed.delete(id)
-  }
+  // disabled for now as there's a bunch of broken stages that keep immediately failing on startup
+  // for (const id of state.downloaded) {
+  //   state.failed.delete(id)
+  // }
   await saveState(state);
   
   console.log("Starting download and upload processors...");
@@ -255,5 +257,6 @@ async function processQueue(
     processQueue(videos, state, "upload"),
   ]);
 
+  await saveState(state);
   console.log("done");
 })();
